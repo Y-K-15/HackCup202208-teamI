@@ -1,1 +1,0 @@
-# HackCup202208-teamI
