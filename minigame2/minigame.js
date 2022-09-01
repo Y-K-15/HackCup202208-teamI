@@ -1,15 +1,19 @@
-(function() {
+(function() 
+{
 
   'use strict';
 
   var panels = document.getElementsByClassName('panel');
   var spin = document.getElementById('spin');
+  var message=document.getElementById('message');
   
   var cards = [
   '../../image/seven.png',
   '../../image/bell.png',
   '../../image/logo.svg'
   ];
+
+
 
 
   var timers=[];
@@ -23,8 +27,6 @@
 
   // var leftCoin=c-5;
 
-  console.log(leftCoin );
-
 
   function runSlot(n) {
     timers[n] = setTimeout(function() {
@@ -34,7 +36,7 @@
       cards[Math.floor(Math.random() * cards.length)];
       // 小数点以下繰り下げ
       runSlot(n);
-    }, 50);
+    }, 60);
     // 50ミリ秒後に再び
   }
   function initPanel(){
@@ -55,52 +57,51 @@
     }
   }
 
-  function getCash(p0){
-  
-    switch(p0){
-      
-      case images[0]:
-        cash += 5;
-        coins.textContent = `コイン枚数：${cash}`;
-        break;
-
-      case  images[1]:  
-        cash += 10;
-        coins.textContent = `コイン枚数：${cash}`;
-        break;
-
-      case  images[2]:
-        cash += 50;
-        coins.textContent = `コイン枚数：${cash}`;
-        break;
-
-      }
-  };
-
   function checkResults() {
 
     var img0 = panels[0].children[0];
     var img1 = panels[1].children[0];
     var img2 = panels[2].children[0];
-    if (img0.src !== img1.src && img0.src !== img2.src ){img0.className='unmatched';}
+    if (img0.src !== img1.src && img0.src !== img2.src ){img0.className='unmatched';
+  }
     //1とも2とも違ったらunmatchedになる
     if (img1.src !== img0.src && img1.src !== img2.src ){img1.className='unmatched';
   }
   if (img2.src !== img1.src && img2.src !== img0.src ){img2.className='unmatched';
   }
 
+  if(img0.src===img1.src &&img0.src===img2.src){
+    document.write('<img src ="../../image/aflo-6780236-1649063601.jpg"> '
+    );
+  }
+else if (img0.src===img1.src || img0.src===img2.src || img1.src===img2.src){
+  (message).innerHTML =  "あ～～～惜しかったねぇ～～～";
+
+}
+else{
+  (message).innerHTML = "ざんね～～～ん！";
+
+}
+  
+//   if(img0.src===img1.src=="../image/seven.png"){document.write("bell");
+
+// }
+
+// if(img0.src===img1.src==cards[2]){document.write("POSSE");
 }
 
-let cash = 10;
-  let coins = document.getElementById('div');
-  coins.textContent = `コイン枚数：${cash}`;
-  coins.classList.add('coins');
-  
-  function haveCash(){
-      cash--;
-      coins.textContent = `コイン枚数：${cash}`;
-  };
 
+// function showResults() {
+// if(img0.src===img1.src===img2.src){document.write("これで君もスロカスだ！");}
+// else if (img0.src===img1.src || img0.src===img2.src || img1.src===img2.src)
+// {
+//   (message).innerHTML = "あ～～～惜しかったねぇ～～～";
+// }
+// else{
+//   (message).innerHTML = "ざんね～～～ん！"
+
+// }
+// }
   initPanel();
   
   spin.addEventListener('click', function() {
