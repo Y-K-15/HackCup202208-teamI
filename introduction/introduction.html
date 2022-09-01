@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swiper</title>
+  <title>事前企画</title>
+  <link rel="stylesheet" href="/introduction/reset.css">
   <link rel="stylesheet" href="introduction.css">
   <link
   rel="stylesheet"
@@ -15,14 +16,32 @@
 <!-- <script src="./introduction.js"></script> -->
 </head>
 <body>
+  <div id="nav-wrapper" class="nav-wrapper">
+    <header>
+        <h1>筑前煮</h1>
+        <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+        </div>
+        <nav class="sp-nav">
+        <ul>
+            <li><a href="/introduction/introduction.html">筑前煮</a></li>
+            <li><a href="/minigame1/minigame1.html">ミニクイズ１</a></li>
+            <li><a href="/minigame2/minigame2.html">ミニクイズ２</a></li>
+        </ul>
+        </nav>
+        <div class="black-bg" id="js-black-bg"></div>
+    </header>
+    </div>
   <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__2.jpg" alt="" width="80%" height="60%"></div>
-    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__0.jpg" alt="" width="80%"height="60%"></div>
-    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__1.jpg" alt="" width="80%"height="60%"></div>
+    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__2.jpg" alt="" width="70%" height="50%"></div>
+    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__0.jpg" alt="" width="70%"height="50%"></div>
+    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__1.jpg" alt="" width="70%"height="50%"></div>
     ...
   </div>
   <!-- If we need pagination -->
@@ -58,5 +77,7 @@
   },
 });
 </script>
+<script src="introduction.js"></script>
+
 </body>
 </html>

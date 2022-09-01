@@ -1,0 +1,25 @@
+  <title>事前企画</title>
+    <link rel="stylesheet" href="/introduction/reset.css">
+    <link rel="stylesheet" href="/introduction/introduction.css">
+</head>
+<body>
+    <div id="nav-wrapper" class="nav-wrapper">
+    <header>
+        <h1>筑前煮</h1>
+        <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+        </div>
+        <nav class="sp-nav">
+        <ul>
+            <li><a href="/introduction/introduction.html">筑前煮</a></li>
+            <li><a href="/minigame1/minigame1.html">ミニクイズ１</a></li>
+            <li><a href="/minigame2/minigame2.html">ミニクイズ２</a></li>
+        </ul>
+        </nav>
+        <div class="black-bg" id="js-black-bg"></div>
+    </header>
+    </div>
+    <script src="/introduction/introduction.js"></script>
+>>>>>>> 07fcac97638e9202af7aa615201ab0984b5aa1b5
