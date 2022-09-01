@@ -8,10 +8,14 @@
   var cards = [
   '../../image/seven.png',
   '../../image/bell.png',
-  '../../image/cherry.png'
+  '../../image/logo.svg'
   ];
 
   var timers=[];
+
+  var stopCount=0 ;
+  // まだ押してないから
+  
 
   function runSlot(n) {
     timers[n] = setTimeout(function() {
@@ -29,10 +33,32 @@
     for (i = 0; i < panels.length; i++) {
       panels[i].children[1].addEventListener('click',function(){
         clearTimeout(timers[this.dataset.index])
-
+        stopCount++;
+        if(stopCount=== panels.length) {
+          stopCount = 0;
+          // 3つ押したらもう一回押せる
+          checkResults();
+          spin.className = ''
+          // 三つストップ押したらinactiveを空文字に変える
+        }
+        
       });
     }
   }
+
+  function checkResults() {
+
+    var img0 = panels[0].children[0];
+    var img1 = panels[1].children[0];
+    var img2 = panels[2].children[0];
+    if (img0.src !== img1.src && img0.src !== img2.src ){img0.className='unmatched';}
+    //1とも2とも違ったらunmatchedになる
+    if (img1.src !== img0.src && img1.src !== img2.src ){img1.className='unmatched';
+  }
+  if (img2.src !== img1.src && img2.src !== img0.src ){img2.className='unmatched';
+  }
+
+}
   initPanel();
   
   spin.addEventListener('click', function() {
@@ -43,6 +69,8 @@
     this.className='inactive'
     for (i = 0; i < panels.length; i++) {
       runSlot(i);
+      panels[i].children[0].className ='';
+      // unmatchedというクラス名を変えてる
     }
   });
 })();
