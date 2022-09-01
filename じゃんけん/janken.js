@@ -17,42 +17,79 @@
             }else if(janken_r === 2 && p_janken_r === 0 && l_janken_r === 1){
                 result_end = "あいこです";
             }
-            else if (janken === 0 && p_janken_r === 2 && l_janken_r === 0){
+            else if (janken_r === 0 && p_janken_r === 2 && l_janken_r === 0){
                 result_end = "あなたの勝ち";
 
-            }else if (janken === 1 && p_janken_r === 0 && l_janken_r === 1){
+            }else if (janken_r === 1 && p_janken_r === 0 && l_janken_r === 1){
                 result_end = "あなたの勝ち";
 
-            }else if (janken === 2 && p_janken_r === 1 && l_janken_r === 2){
+            }else if (janken_r === 2 && p_janken_r === 1 && l_janken_r === 2){
                 result_end = "あなたの勝ち";
 
-            }else if (janken === 2 && p_janken_r === 0 && l_janken_r === 2){
+            }else if (janken_r === 2 && p_janken_r === 0 && l_janken_r === 2){
                 result_end = "あなたの負け";
 
-            }else if (janken === 0 && p_janken_r === 1 && l_janken_r === 0){
+            }else if (janken_r === 0 && p_janken_r === 1 && l_janken_r === 0){
                 result_end = "あなたの負け";
 
-            }else if (janken === 1 && p_janken_r === 2 && l_janken_r === 1){
+            }else if (janken_r === 1 && p_janken_r === 2 && l_janken_r === 1){
                 result_end = "あなたの負け";
+
+            }
+            else if (janken_r === 1 && p_janken_r === 1 && l_janken_r === 0){
+                result_end = "ジェイの勝ち";
+
+            }else if (janken_r === 2 && p_janken_r === 2 && l_janken_r === 1){
+                result_end = "ジェイの勝ち";
+
+            }else if (janken_r === 0 && p_janken_r === 0 && l_janken_r === 2){
+                result_end = "ジェイの勝ち";
+
+            }else if (janken_r === 0 && p_janken_r === 1 && l_janken_r === 1){
+                result_end = "トミーの勝ち";
+
+            }else if (janken_r === 1 && p_janken_r === 2 && l_janken_r === 2){
+                result_end = "トミーの勝ち";
+
+            }else if (janken_r === 2 && p_janken_r === 0 && l_janken_r === 0){
+                result_end = "トミーの勝ち";
+
+            }else if (janken_r === p_janken_r === 0 && l_janken_r === 1){
+                result_end = "あなたの勝ち";
+
+            }else if (janken_r === p_janken_r === 1 && l_janken_r === 2){
+                result_end = "あなたの勝ち";
+
+            }else if (janken_r === p_janken_r === 2 && l_janken_r === 0){
+                result_end = "あなたの勝ち";
+
+            }else if (janken_r === 1 && p_janken_r === l_janken_r === 0){
+                result_end = "あなたの勝ち";
+
+            }else if (janken_r === 2 && p_janken_r === l_janken_r === 1){
+                result_end = "あなたの勝ち";
+
+            }else if (janken_r === 0 && p_janken_r === l_janken_r === 2){
+                result_end = "あなたの勝ち";
 
             }
             else {
-                result_end = "やり直し";
+                result_end = "あなたの負け";
 
             }
 
-            function set_visibility() {
-                if (document.getElementById('btn_1').checked ){
-                  // btn_1を非表示
-                  document.getElementById('btn_1').style.visibility = 'hidden'
-                  document.getElementById('btn_2').style.visibility = 'hidden'
-                  document.getElementById('btn_3').style.visibility = 'hidden'
-                }
+            // function set_visibility() {
+            //     if (document.getElementById('btn_1').checked || document.getElementById('btn_2').checked || document.getElementById('btn_3').checked){
+            //       // btn_1を非表示
+            //       document.getElementById('btn_1').style.visibility = 'hidden'
+            //       document.getElementById('btn_2').style.visibility = 'hidden'
+            //       document.getElementById('btn_3').style.visibility = 'hidden'
+            //     }
                 // else if {
                 //   // btn_1を表示
                 //   document.getElementById('btn_1').style.visibility = 'visible'
                 // }
-              }
+              
 
 
             document.getElementById("janken1").innerHTML = p_janken[p_janken_r] + 'を選択しました';
