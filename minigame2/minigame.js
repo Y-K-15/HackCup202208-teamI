@@ -36,7 +36,7 @@
       cards[Math.floor(Math.random() * cards.length)];
       // 小数点以下繰り下げ
       runSlot(n);
-    }, 50);
+    }, 60);
     // 50ミリ秒後に再び
   }
   function initPanel(){
