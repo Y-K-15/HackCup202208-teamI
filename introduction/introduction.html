@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>事前企画</title>
-    <link rel="stylesheet" href="/introduction/reset.css">
-    <link rel="stylesheet" href="/introduction/introduction.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事前企画</title>
+  <link rel="stylesheet" href="/introduction/reset.css">
+  <link rel="stylesheet" href="introduction.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- <script src="./introduction.js"></script> -->
 </head>
 <body>
-    <div id="nav-wrapper" class="nav-wrapper">
+  <div id="nav-wrapper" class="nav-wrapper">
     <header>
         <h1>筑前煮</h1>
         <div class="hamburger" id="js-hamburger">
@@ -27,6 +34,50 @@
         <div class="black-bg" id="js-black-bg"></div>
     </header>
     </div>
-    <script src="/introduction/introduction.js"></script>
+  <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__2.jpg" alt="" width="70%" height="50%"></div>
+    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__0.jpg" alt="" width="70%"height="50%"></div>
+    <div class="swiper-slide"><img src="../image/LINE_ALBUM_ハッカソン横もく！！2期生3期生関係なくみんないれてっちゃってください！！__1.jpg" alt="" width="70%"height="50%"></div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction:"horizontal",
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+<script src="introduction.js"></script>
+
 </body>
 </html>

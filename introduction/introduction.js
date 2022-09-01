@@ -1,3 +1,5 @@
+
+// const swiper = new Swiper(".swiper", {});
 window.onload = function () {
     var nav = document.getElementById('nav-wrapper');
     var hamburger = document.getElementById('js-hamburger');
@@ -10,6 +12,4 @@ window.onload = function () {
         nav.classList.remove('open');
     });
 };
-
-
 
