@@ -60,27 +60,27 @@
             }else if (janken_r === 2 && p_janken_r === 0 && l_janken_r === 0){
                 result_end = "トミーの勝ち";
 
-            }else if (janken_r === p_janken_r === 0 && l_janken_r === 1){
-                result_end = "あなたの勝ち";
+            }else if (janken_r === 0 && p_janken_r === 0 && l_janken_r === 1){
+                result_end = "あなたとトミーの勝ち";
 
-            }else if (janken_r === p_janken_r === 1 && l_janken_r === 2){
-                result_end = "あなたの勝ち";
+            }else if (janken_r === 1 && p_janken_r === 1 && l_janken_r === 2){
+                result_end = "あなたとトミーの勝ち";
 
-            }else if (janken_r === p_janken_r === 2 && l_janken_r === 0){
-                result_end = "あなたの勝ち";
+            }else if (janken_r === 2 && p_janken_r === 2 && l_janken_r === 0){
+                result_end = "あなたとトミーの勝ち";
 
-            }else if (janken_r === 1 && p_janken_r === l_janken_r === 0){
-                result_end = "あなたの勝ち";
+            }else if (janken_r === 1 && p_janken_r === 0 && l_janken_r === 0){
+                result_end = "あなたとジェイの勝ち";
 
-            }else if (janken_r === 2 && p_janken_r === l_janken_r === 1){
-                result_end = "あなたの勝ち";
+            }else if (janken_r === 2 && p_janken_r === 1 && l_janken_r === 1){
+                result_end = "あなたとジェイの勝ち";
 
-            }else if (janken_r === 0 && p_janken_r === l_janken_r === 2){
-                result_end = "あなたの勝ち";
+            }else if (janken_r === 0 && p_janken_r === 2 && l_janken_r === 2){
+                result_end = "あなたとジェイの勝ち";
 
             }
             else {
-                result_end = "あなたの負け";
+                result_end = "あいこです";
 
             }
 
@@ -98,7 +98,7 @@
               
 
 
-            document.getElementById("janken1").innerHTML = p_janken[p_janken_r] + 'を選択しました';
+            document.getElementById("janken1").innerHTML = "あなたは" + p_janken[p_janken_r] + 'を選択しました';
             document.getElementById("janken2").innerHTML = "トミーは" + janken[janken_r] + "を選びました。" + "ジェイは" + l_janken[l_janken_r] + "を選びました。" + "結果は" + result_end;
             
         }
