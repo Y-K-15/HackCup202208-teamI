@@ -16,6 +16,12 @@
                 result_end = "あいこです";
             }else if(janken_r === 2 && p_janken_r === 0 && l_janken_r === 1){
                 result_end = "あいこです";
+            }else if(janken_r === 0 && p_janken_r === 2 && l_janken_r === 1){
+                result_end = "あいこです";
+            }else if(janken_r === 1 && p_janken_r === 0 && l_janken_r === 2){
+                result_end = "あいこです";
+            }else if(janken_r === 2 && p_janken_r === 1 && l_janken_r === 0){
+                result_end = "あいこです";
             }
             else if (janken_r === 0 && p_janken_r === 2 && l_janken_r === 0){
                 result_end = "あなたの勝ち";
